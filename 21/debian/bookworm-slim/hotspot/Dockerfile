@@ -8,6 +8,7 @@ FROM eclipse-temurin:"${JAVA_VERSION}"-jdk-jammy as jre-build
 # Arguments to jlink are specific to Java 21 jlink
 RUN if test "${TARGETPLATFORM}" != 'linux/arm/v7'; then \
       jlink \
+        --remove-modules ALL-MODULE-PATH\
         --add-modules ALL-MODULE-PATH \
         --strip-java-debug-attributes \
         --no-man-pages \
