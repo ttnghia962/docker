@@ -23,6 +23,7 @@ group "linux" {
 group "linux-arm64" {
   targets = [
     "almalinux_jdk11",
+    "debian_jdk18",
     "debian_jdk11",
     "debian_jdk17",
     "debian_jdk21",
