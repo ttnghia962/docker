@@ -7,7 +7,7 @@ $COPY_REFERENCE_FILE_LOG = Get-EnvOrDefault 'COPY_REFERENCE_FILE_LOG' "$($JENKIN
 try {
   [System.IO.File]::OpenWrite($COPY_REFERENCE_FILE_LOG).Close()
 } catch {
-  Write-Error "Can not write to $COPY_REFERENCE_FILE_LOG. Wrong volume permissions?`n`n$_"
+  Write-Error "Can not write to $COPY_REFERENCE_FILE_LOG. Wrong volume permissions ???`n`n$_"
   exit 1
 }
 
